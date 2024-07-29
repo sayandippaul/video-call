@@ -32,7 +32,7 @@ const peerServer = ExpressPeerServer(server, {
     debug: true
 });
 app.use("/peerjs", peerServer);
-console.log(peerServer);
+// console.log(peerServer);
 
 app.get("/", (req, res) => {
     res.render('login');

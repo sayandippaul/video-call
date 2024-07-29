@@ -9,8 +9,8 @@ while (!user) {
 }
 
 var peer = new Peer({
-    host: '127.0.0.1',
-    port: '5000',
+    host: 'https://video-call-uu9o.onrender.com/',
+    port: '10000',
     path: '/peerjs',
     // secure: true
 });
