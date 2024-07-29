@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VC Chat</title>
+    <link rel="stylesheet" href="loginPage_style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome to VC Chat</h1>
+        <div class="login-buttons">
+            <button class="btn" id="hostButton" onclick="createRoom()">Create a room</button>
+            <b style="font-size: 20px;">or</b>
+            <div class="join-room">
+                <input class="link" type="text" placeholder="Enter room link">
+                <button class="btn" id="joinButton">Join room</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('joinButton').addEventListener('click', () => {
+            const roomLink = document.querySelector('.link').value;
+            const roomId = new URL(roomLink).pathname.slice(1);  // Extract room ID from URL
+            if (roomId) {
+                window.location.href = `/${roomId}`;
+            } else {
+                alert('Please enter a valid room link.');
+            }
+        });
+
+        function createRoom() {
+            window.location.href = '/create';
+        }
+    </script>
+</body>
+</html>

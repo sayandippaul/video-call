@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VC Chat</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        const ROOM_ID = "<%= roomId %>";
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo">
+            <h3>VC Chat</h3>
+        </div>
+        <!-- <div id="showChat" class="options_button">
+            <i class="material-icons">chat</i>
+        </div>
+        <div class="header_back"><i class="material-icons">arrow_back</i></div> -->
+    </div>
+
+    <div class="main">
+        <div class="main_left">
+            <div class="videos_group">
+                <div id="video-grid">
+                    
+                </div>
+            </div>
+
+            <div class="options">
+                <div class="options_left">
+                    <div id="stopVideo" class="options_button">
+                        <i class="material-icons">videocam</i>
+                    </div>
+                    <div id="muteButton" class="options_button">
+                        <i class="material-icons">mic</i>
+                    </div>
+                </div>
+
+                <div class="options_right">
+                    <div id="disconnect" class="options_button background_red">
+                        <i class="material-icons">phone</i>
+                    </div>
+                    <div id="inviteButton" class="options_button">
+                        <i class="material-icons">person_add</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main_right">
+            <div class="main_chat_window" id="chat-messages">
+                <div class="messages">
+                </div>
+            </div>
+
+            <div class="main_message_container">
+                <input type="text" id="chat-input" placeholder="Type a message...">
+                <button id="sendButton" class="options_button">
+                    <i class="material-icons">send</i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
